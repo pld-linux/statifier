@@ -1,5 +1,5 @@
 Summary:	Convert elf dynamic linked exe to "pseudo-static"
-Summary(pl):	Konwertuje dynamiczne binarki elf do pseudo-statycznych
+Summary(pl):	Konwersja dynamicznych binarek ELF do pseudo-statycznych
 Name:		statifier
 Version:	1.5.0
 Release:	0.1
@@ -7,15 +7,13 @@ License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/statifier/%{name}-%{version}.tar.gz
 # Source0-md5:	bf61de9dba74cce8708b21b1b39184c4
-Url:		http://%{name}.sourceforge.net
+URL:		http://statifier.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%ifarch %{ix86} sparc ppc
-%define bits 32
-%endif
-
-%ifarch amd64 alpha sparc64 ppc64 ia64
+%ifarch alpha amd64 ia64 ppc64 s390x sparc64
 %define bits 64
+%else
+%define bits 32
 %endif
 
 %description
@@ -39,6 +37,7 @@ innej maszynie bez potrzeby przenoszenia wszystkich bibliotek.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
