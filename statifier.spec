@@ -1,12 +1,12 @@
 Summary:	Convert elf dynamic linked exe to "pseudo-static"
 Summary(pl):	Konwersja dynamicznych binarek ELF do pseudo-statycznych
 Name:		statifier
-Version:	1.5.0
+Version:	1.6.6
 Release:	0.1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/statifier/%{name}-%{version}.tar.gz
-# Source0-md5:	bf61de9dba74cce8708b21b1b39184c4
+# Source0-md5:	626ea4e6ba723d43fa8ba0d0e04e55e3
 URL:		http://statifier.sourceforge.net/
 BuildRequires:	rpmbuild(macros) >= 1.213
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
