@@ -1,5 +1,5 @@
 Summary:	Convert ELF dynamically linked execulables to "pseudo-static"
-Summary(pl.UTF-8):   Konwersja dynamicznych binarek ELF do pseudo-statycznych
+Summary(pl.UTF-8):	Konwersja dynamicznych binarek ELF do pseudo-statycznych
 Name:		statifier
 Version:	1.6.7
 Release:	1
