@@ -1,5 +1,5 @@
 Summary:	Convert ELF dynamically linked execulables to "pseudo-static"
-Summary(pl):	Konwersja dynamicznych binarek ELF do pseudo-statycznych
+Summary(pl.UTF-8):   Konwersja dynamicznych binarek ELF do pseudo-statycznych
 Name:		statifier
 Version:	1.6.7
 Release:	1
@@ -32,10 +32,10 @@ libraries (and all LD_PRELOAD libraries if any) one file. This file
 can be copied and run on another machine without need to drag all it's
 libraries.
 
-%description -l pl
+%description -l pl.UTF-8
 Statifier tworzy z dynamicznie zlinkowanej binarki ELF i wszystkich
-jej bibliotek (oraz wszystkich bibliotek LD_PRELOAD je¿eli takie
-wystêpuj±) jeden plik. Ten plik mo¿e byæ kopiowany i uruchamiany na
+jej bibliotek (oraz wszystkich bibliotek LD_PRELOAD jeÅ¼eli takie
+wystÄ™pujÄ…) jeden plik. Ten plik moÅ¼e byÄ‡ kopiowany i uruchamiany na
 innej maszynie bez potrzeby przenoszenia wszystkich bibliotek.
 
 %prep
