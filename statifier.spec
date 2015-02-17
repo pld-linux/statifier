@@ -1,12 +1,12 @@
 Summary:	Convert ELF dynamically linked execulables to "pseudo-static"
 Summary(pl.UTF-8):	Konwersja dynamicznych binarek ELF do pseudo-statycznych
 Name:		statifier
-Version:	1.6.7
+Version:	1.7.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/statifier/%{name}-%{version}.tar.gz
-# Source0-md5:	d4c452dce431f62f1ece60a638a58655
+# Source0-md5:	858ab8e3dc3aacc23e69f681d671479f
 URL:		http://statifier.sourceforge.net/
 BuildRequires:	rpmbuild(macros) >= 1.213
 %ifarch amd64
@@ -23,7 +23,9 @@ BuildRequires:	glibc-static(x86_64)
 BuildRequires:	glibc-static(i686)
 %endif
 BuildRequires:	sed >= 4.0
-ExclusiveArch:	%{ix86} %{x8664} alpha
+Requires:	coreutils
+Requires:	gawk
+ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,20 +59,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog FAQ INSTALL NEWS README THANKS TODO doc
+%doc AUTHORS ChangeLog FAQ NEWS README THANKS TODO doc
 %attr(755,root,root) %{_bindir}/statifier
 %dir %{_prefix}/lib/statifier
 %{_prefix}/lib/statifier/VERSION
 %attr(755,root,root) %{_prefix}/lib/statifier/*.sh
 %attr(755,root,root) %{_prefix}/lib/statifier/*.src
-%attr(755,root,root) %{_prefix}/lib/statifier/*.gdb
 %attr(755,root,root) %{_prefix}/lib/statifier/elf_class
 %ifarch %{ix86} %{x8664}
 %dir %{_prefix}/lib/%{name}/32
 %attr(755,root,root) %{_prefix}/lib/statifier/32/*
 %endif
-%ifarch %{x8664} alpha
+%ifarch %{x8664}
 %dir %{_prefix}/lib/%{name}/64
 %attr(755,root,root) %{_prefix}/lib/statifier/64/*
 %endif
-%{_mandir}/man1/*
+%{_mandir}/man1/%{name}.1*
