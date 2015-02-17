@@ -5,7 +5,7 @@ Version:	1.7.3
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/statifier/%{name}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/statifier/%{name}-%{version}.tar.gz
 # Source0-md5:	858ab8e3dc3aacc23e69f681d671479f
 URL:		http://statifier.sourceforge.net/
 BuildRequires:	rpmbuild(macros) >= 1.213
