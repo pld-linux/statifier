@@ -46,7 +46,7 @@ innej maszynie bez potrzeby przenoszenia wszystkich bibliotek.
 sed -i -e 's/-O2 -g/%{rpmcflags}/' src/Makefile
 
 %build
-%{__make} all
+%{__make} -j1 all
 
 %install
 rm -rf $RPM_BUILD_ROOT
