@@ -19,8 +19,8 @@ BuildRequires:	glibc-static(i686)
 BuildRequires:	glibc-static(ia32e)
 %endif
 %ifarch x86_64
-BuildRequires:	glibc-static(x86_64)
 BuildRequires:	glibc-static(i686)
+BuildRequires:	glibc-static(x86_64)
 %endif
 BuildRequires:	sed >= 4.0
 Requires:	coreutils
@@ -29,7 +29,7 @@ ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Statifier create from dynamically linked ELF executable and all it's
+Statifier creates from dynamically linked ELF executable and all it's
 libraries (and all LD_PRELOAD libraries if any) one file. This file
 can be copied and run on another machine without need to drag all it's
 libraries.
